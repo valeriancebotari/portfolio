@@ -1,2 +1,2 @@
 /* ****************** JS CODE ******************** */
-console.log('sunt in js');
+console.log('sunt in js code');
