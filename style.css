@@ -148,7 +148,7 @@ main nav :where(.container, ul) {
     height: inherit;
 }
 
-main nav a {
+main nav .menu a {
     font-weight: 800;
     display: flex;
     align-items: center;
@@ -228,6 +228,35 @@ main nav .menu ul {
     justify-content: center;
     gap: 30px;
 }
+
+/* **************************** */
+/* ********* HERO ************* */
+/* **************************** */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero .wrapper {
+    position: relative;
+    min-height: calc(100vh - 100px);
+    
+}
+
+.hero .wrapper .image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transform: translateX(50%);
+}
+
+.hero .wrapper .image img {
+    max-width: 600px;
+}
+
+
+
 /* **************************** */
 /* ********* MEDIA QUERIES **** */
 /* **************************** */
@@ -242,10 +271,6 @@ main nav .menu ul {
 
     .container {
         padding: 0 64px;
-    }
-
-    main nav ul {
-        gap: 46px;
     }
 
     .mobile-only {
@@ -267,9 +292,11 @@ main nav .menu ul {
     main nav .menu ul {
         flex-direction: row;
         justify-content: unset;
+        gap: 46px;
     }
 
     main nav .menu ul li a {
         color: inherit;
+        font-weight: 600;
     }
 } /* **** end 768px */
