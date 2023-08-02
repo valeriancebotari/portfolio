@@ -255,6 +255,132 @@ main nav .menu ul {
     max-width: 600px;
 }
 
+.hero .text {
+    width: fit-content;
+    padding-top: 10%;
+    min-height: 850px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+}
+
+.hero .text > * {
+    padding-right: 30%;
+}
+
+.hero .text-top h1 span {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.hero .text-top h1 strong {
+    font-size: clamp(40px, 5.5vw, 2.5em);
+    font-weight: 800;
+}
+
+.hero .text-top p,
+.hero .text-bottom ul li a {
+    color: var(--grey-color);
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 50px;
+    padding: 0 36px;
+    margin-top: 46px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: var(--primary-color);
+    color: var(--pure-white);
+    border-radius: 25px;
+    box-shadow: 0 0 0 4px var(--primary-04-color);    
+}
+
+.button:hover {
+    animation: blinkprimary 1s infinite;
+}
+
+.hero .text-bottom ul {
+    padding: 0 0 30px 30px;    
+}
+
+.hero .text-bottom ul li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: fit-content;
+}
+
+.hero .text-bottom ul li a {
+    position: relative;
+}
+
+.hero .text-bottom ul li a::before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: -22px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--light-color);
+    border-radius: 50%;
+    transition: background-color .3s;
+}
+
+.hero .text-bottom ul li a:hover::before {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 0 4px var(--primary-04-color);
+    animation: blinkprimary .5s infinite;
+}
+
+/* **************************** */
+/* ********* SERVICES ********* */
+/* **************************** */
+.service {
+    background-color: var(--light-color);
+}
+
+main > div:not(.hero) {
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+main > div .head {
+    margin-bottom: 60px;
+}
+
+main > div .head h2 {
+    font-size: clamp(36px, 4.5vw, 3em);
+}
+
+.service ul {
+    display: grid;
+    gap: 46px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.service ul li {
+    position: relative;
+    padding: 48px 32px 32px;
+    margin-top: 32px;
+    background-color: var(--white-color);
+    border-radius: 20px;
+    transition: background-color .3s, color .3s, box-shadow .3s;
+}
+
+.service ul li:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    box-shadow: rgb(0 0 0 / 30%) 0 30px 60px -10px;
+}
+
+.service ul li i {
+    position: absolute;
+}
+
 
 
 /* **************************** */
@@ -300,3 +426,13 @@ main nav .menu ul {
         font-weight: 600;
     }
 } /* **** end 768px */
+
+@media screen and (min-width: 1200px) {
+    .hero .wrapper .image {
+        transform: none;
+    }
+
+    .hero .text > * {
+        padding: 0;
+    }
+} /* ***** end 1200px */
