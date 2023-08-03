@@ -356,9 +356,16 @@ main > div .head h2 {
     font-size: clamp(36px, 4.5vw, 3em);
 }
 
-.service ul {
+main .wrapper.center {
+    text-align: center;
+}
+
+main > div:not(.hero) ul {
     display: grid;
     gap: 46px;
+}
+
+.service ul {    
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
@@ -379,6 +386,40 @@ main > div .head h2 {
 
 .service ul li i {
     position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-color);
+    color: var(--primary-color);
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px var(--dark-04-color),
+                0 0 0 15px var(--light-color);
+}
+
+.service ul li i:hover {
+    /* animation: blinkdark 1s infinite; */
+}
+
+.service ul li h3 {
+    font-size: 18px;
+    margin: 16px;
+}
+
+.service ul li p {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--grey-color);
+    transition: color .3s;
+}
+
+.service ul li:hover p {
+    color: var(--dark-color);
 }
 
 
