@@ -10,6 +10,18 @@
     --light-color:      #f1f2f6; 
     --dark-color:       #2f3542;
     --dark-04-color:    #2f354266;
+
+    --csspercent:       95;
+    --jspercent:        90;
+    --vuepercent:       85;
+    --reactpercent:     80;
+    --flutterpercent:   89;
+
+    --csscolor:         #00a0e4; 
+    --jscolor:          #f7971e;
+    --reactcolor:       #61dbfb;
+    --vuecolor:         #00bc9b;
+    --fluttercolor:     #54c5f8;
 }
 
 * {
@@ -365,6 +377,16 @@ main > div:not(.hero) ul {
     gap: 46px;
 }
 
+main .wrapper.center .head p {
+    margin: 16px auto 0;
+}
+
+main .wrapper .head p {
+    max-width: 400px;
+    color: var(--grey-color);
+    margin-top: 16px;
+}
+
 .service ul {    
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
@@ -422,7 +444,151 @@ main > div:not(.hero) ul {
     color: var(--dark-color);
 }
 
+/* **************************** */
+/* ********* SKILLS *********** */
+/* **************************** */
+.skills li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: 16px;    
+}
 
+.skills li :where(.circle, svg) {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.skills li svg circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke-width: 4;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 440;    
+}
+
+.skills li svg {
+    transform: rotate(270deg);
+}
+
+.skills li.css svg circle {
+    stroke-dashoffset: calc(440 - (440 * var(--csspercent)) / 100);
+}
+
+.skills li.js svg circle {
+    stroke-dashoffset: calc(440 - (440 * var(--jspercent)) / 100);
+}
+
+.skills li.react svg circle {
+    stroke-dashoffset: calc(440 - (440 * var(--reactpercent)) / 100);
+}
+
+.skills li.vue svg circle {
+    stroke-dashoffset: calc(440 - (440 * var(--vuepercent)) / 100);
+}
+
+.skills li.flutter svg circle {
+    stroke-dashoffset: calc(440 - (440 * var(--flutterpercent)) / 100);
+}
+
+.skills li .circle .inside {
+    position: absolute;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    top: 20px;
+    left: 20px;
+    background-color: var(--light-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills li .circle .inside::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--light-color);
+    border-radius: 50%;
+    transform: scale(1.28);
+    z-index: -1;
+}
+
+.skills li .circle .inside span {
+    font-size: 24px;
+    color: var(--grey-color);
+}
+
+.skills li .circle .dot {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.skills li .circle .dot::before {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    top: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.skills li.css .circle .dot {
+    transform: rotate(calc(3.6deg * var(--csspercent)));
+}
+
+.skills li.js .circle .dot {
+    transform: rotate(calc(3.6deg * var(--jspercent)));
+}
+
+.skills li.vue .circle .dot {
+    transform: rotate(calc(3.6deg * var(--vuepercent)));
+}
+
+.skills li.react .circle .dot {
+    transform: rotate(calc(3.6deg * var(--reactpercent)));
+}
+
+.skills li.flutter .circle .dot {
+    transform: rotate(calc(3.6deg * var(--flutterpercent)));
+}
+
+.skills li.css .circle .dot::before {
+    background-color: var(--csscolor);
+    box-shadow: 0 0 10px var(--csscolor);
+}
+
+.skills li.js .circle .dot::before {
+    background-color: var(--jscolor);
+    box-shadow: 0 0 10px var(--jscolor);
+}
+
+.skills li.react .circle .dot::before {
+    background-color: var(--reactcolor);
+    box-shadow: 0 0 10px var(--reactcolor);
+}
+
+.skills li.vue .circle .dot::before {
+    background-color: var(--vuecolor);
+    box-shadow: 0 0 10px var(--vuecolor);
+}
+
+.skills li.flutter .circle .dot::before {
+    background-color: var(--fluttercolor);
+    box-shadow: 0 0 10px var(--fluttercolor);
+}
 
 /* **************************** */
 /* ********* MEDIA QUERIES **** */
