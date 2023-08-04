@@ -447,6 +447,12 @@ main .wrapper .head p {
 /* **************************** */
 /* ********* SKILLS *********** */
 /* **************************** */
+.skills ul {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    max-width: 950px;
+    margin: auto;
+}
+
 .skills li {
     display: flex;
     flex-direction: column;
@@ -589,6 +595,14 @@ main .wrapper .head p {
     background-color: var(--fluttercolor);
     box-shadow: 0 0 10px var(--fluttercolor);
 }
+
+.skills li h4 {
+    font-weight: 600;   
+    color: var(--grey-color); 
+}
+
+
+
 
 /* **************************** */
 /* ********* MEDIA QUERIES **** */
