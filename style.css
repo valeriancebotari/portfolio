@@ -583,7 +583,7 @@ main .wrapper .head p {
 
 .skills li.react .circle .dot::before {
     background-color: var(--reactcolor);
-    box-shadow: 0 0 10px var(--reactcolor);
+    /* box-shadow: 0 0 10px var(--reactcolor); */
 }
 
 .skills li.vue .circle .dot::before {
