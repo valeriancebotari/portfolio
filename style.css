@@ -596,10 +596,10 @@ main .wrapper .head p {
     box-shadow: 0 0 10px var(--fluttercolor);
 }
 
-.skills li h4 {
+/*.skills li h4 {
     font-weight: 600;   
     color: var(--grey-color); 
-}
+} */
 
 
 
