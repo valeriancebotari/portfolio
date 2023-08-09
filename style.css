@@ -97,14 +97,14 @@ header {
     transition-delay: .2s;
 }
 
-header a {
+/*header a {
     font-size: 20px;
     width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
+}*/
 
 header .logo a {
     background-color: var(--primary-color);
