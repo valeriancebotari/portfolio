@@ -11,7 +11,7 @@ menuTrigger.addEventListener('click', () => {
     }, 200);
 });
 
-// close menu by clicking outside
+// close menu by clicking outside the menu
 document.addEventListener('click', (e) => {
     const isClosest = e.target.closest(Menu);
 
