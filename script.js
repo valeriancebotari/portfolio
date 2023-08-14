@@ -12,11 +12,11 @@ menuTrigger.addEventListener('click', () => {
 });
 
 // close menu by clicking outside the menu
-document.addEventListener('click', (e) => {
+/*document.addEventListener('click', (e) => {
     const isClosest = e.target.closest(Menu);
 
     if(!isClosest && divMenu.classList.contains('show')){
         divMenu.classList.remove('show');
         document.body.classList.remove('menu-visible');
     }
-})
+}) */
