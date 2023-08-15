@@ -169,9 +169,9 @@ main nav .menu a {
     transition: color .3s;
 }
 
-main nav .menu a:hover {
+/* main nav .menu a:hover {
     color: var(--dark-color);
-}
+} */
 
 main nav .daynight input {
     position: absolute;
